@@ -15,14 +15,15 @@ html[data-theme=day] .dioniso-appearance p{color:#75627e}
 html[data-theme=day] .dioniso-theme-toggle{background:#f1e5f9;color:#643181;border-color:#ad8bbe}
 /* Preserve all three characters. Only empty black margins are cropped. */
 .onboarding-triad{margin:16px 0 20px;border:1px solid #47364e;border-radius:17px;overflow:hidden;background:#0b080e;color:#f1e8f7}
-.onboarding-triad-image{position:relative;overflow:hidden;background:#000;aspect-ratio:1.5}
+/* This scene must not inherit the original .portrait avatar's 42px circle. */
+.onboarding-triad .onboarding-triad-image{position:relative;display:block;width:100%;height:auto;border:0;border-radius:0;overflow:hidden;background:#000;aspect-ratio:1.5}
 .onboarding-triad-image img{display:block;width:100%;height:auto;max-width:100%}
-.onboarding-triad-image.portrait{aspect-ratio:1.1}
-.onboarding-triad-image.portrait img{transform:translateY(-13%)}
-.onboarding-triad-image.tablet{aspect-ratio:1.05}
-.onboarding-triad-image.tablet img{transform:translateY(-10%)}
-.onboarding-triad figcaption{padding:12px 13px}
-.onboarding-triad figcaption strong{display:block;font-size:14px;line-height:1.45;font-weight:650;color:#eed6a9}
+.onboarding-triad .onboarding-triad-image--portrait{aspect-ratio:1.1}
+.onboarding-triad .onboarding-triad-image--portrait img{transform:translateY(-13%)}
+.onboarding-triad .onboarding-triad-image--tablet{aspect-ratio:1.05}
+.onboarding-triad .onboarding-triad-image--tablet img{transform:translateY(-10%)}
+.onboarding-triad figcaption{padding:12px 13px;container-type:inline-size}
+.onboarding-triad figcaption strong{display:block;white-space:nowrap;font-size:min(14px,5.2cqw);line-height:1.45;font-weight:650;color:#eed6a9}
 .onboarding-triad figcaption p{font-size:12px;line-height:1.5;color:#c6b6d0;margin:5px 0 0}
 .onboarding-families{margin:14px 0 18px}
 .onboarding-families .onboarding-triad{margin-bottom:9px}
@@ -35,3 +36,9 @@ html[data-theme=day] .onboarding-triad figcaption strong{color:#673876}
 html[data-theme=day] .onboarding-triad figcaption p{color:#716379}
 html[data-theme=day] .onboarding-triad-selector button{background:#f7f0fb;color:#713b85;border-color:#ad89bf}
 html[data-theme=day] .onboarding-triad-selector button[aria-pressed=true]{background:#7b3f9d;color:white}
+
+/* The welcome illustration shows all twelve without a portrait frame. */
+.welcome .welcome-kawaii-scene{height:auto;display:block;padding:126px 10px 64px;overflow:visible}
+.welcome .welcome-kawaii-scene>img{display:block;width:100%;height:auto;max-width:100%;border:0;border-radius:0;object-fit:contain;object-position:center;transform:none;box-shadow:none}
+.welcome .welcome-kawaii-scene .welcome-line{width:100%;left:0;bottom:28px;justify-content:center}
+.welcome:has(.welcome-kawaii-scene) .welcome-bottom{margin-top:-24px}
