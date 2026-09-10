@@ -76,3 +76,5 @@ En la App Store simulada, la tarjeta de Marte recorta el interior de la pantalla
 ## Apariencia en Inicio (Dioniso)
 
 A la derecha de «Hola, Luciano» (o el perfil seleccionado) hay un botón pequeño: ☀️ activa el modo día y 🌙 vuelve al modo noche. El control siempre refleja la acción siguiente, también al regresar a Inicio. La elección sigue guardada en el dispositivo y sincronizada entre el prototipo y el chat. Reemplaza el antiguo desplegable que quedaba más abajo en Inicio.
+
+El estado base es siempre noche: sin una elección manual del usuario, nunca se activa el modo día, tampoco por el tema del sistema. Las preferencias de versiones anteriores del prototipo se ignoran. Solo el botón ☀️/🌙 guarda la nueva preferencia manual.
