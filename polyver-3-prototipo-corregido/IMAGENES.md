@@ -45,3 +45,110 @@ Constraints: exactly12 distinct whole characters, correct identities and order; 
 - `dist/official/kawaii/welcome-12-kawaii.webp`
 
 Se utilizó la herramienta integrada de imágenes. Los archivos se convirtieron a WebP para la web, sin cambiar su composición. Las imágenes originales de las cuatro tríadas se conservaron.
+
+
+## Bienvenida desde los bordes del celular
+
+Archivo publicado: `dist/official/kawaii/welcome-12-kawaii-border.webp`. Herramienta integrada imagegen; composición inicial y edición final con fondo negro. Los doce se asoman con caras y manos, tres por borde. El centro alberga controles HTML reales.
+
+Use case: stylized-concept
+Asset type: a single transparent PNG decorative border overlay for the full height of a mobile welcome screen.
+Input image 1 is a CHARACTER IDENTITY AND STYLE REFERENCE ONLY. Recompose its twelve characters into a completely new border layout. Preserve their recognizable facial identities, hair, crowns, horns, jewelry, colors, expressive purple eyes and highly detailed polished cute chibi 3D rendering. Do not preserve the reference's full-body arrangement or its black background.
+
+Output: ONE tall vertical image, approximately 9:19.5 aspect ratio, preferably 1024 x 2048 pixels. The background and the entire empty center MUST have genuine PNG alpha transparency. No opaque black, gray or white background, no painted transparency checkerboard. There must be no visible phone, rectangle, frame, border stroke, screen, UI, letters or text. Only the twelve peeking characters are visible.
+
+Primary composition: exactly TWELVE unique mythological characters peek INTO the canvas from OUTSIDE all FOUR outer edges. Exactly three at the top edge, three distributed down the left edge, three distributed down the right edge, and three at the bottom edge. These are HEADS AND LITTLE HANDS peeking around an imaginary edge; an occasional tiny sliver of shoulder is okay. All torsos, full bodies, legs, feet, weapons and large props remain OUTSIDE the image. Crop the outward-facing backs of heads, hair, shoulders or arms at the physical outer image boundary if needed, but never crop eyes or faces. There is no drawn object for them to grasp. Side characters lean/turn inward and their little fingers curl around the imaginary left/right image edge; top characters peek downward and bottom characters peek upward. Playful curious warm expressions. They look toward the empty center. Each face is small enough that the side characters occupy only the outermost 16–18% of canvas width; the top/bottom groups occupy only the outermost 12% of canvas height. Leave the CENTRAL RECTANGLE from x=20% to 80% and y=16% to 84% COMPLETELY EMPTY AND TRANSPARENT; no hair, particles, glows, props, hands or shadows may enter this rectangle. Empty space between the separate characters must also be genuinely transparent.
+
+EXACT placement and identity roster (each person appears once only):
+TOP EDGE, left to right at approximately x=23%, 50%, 77%, heads/hands peeking downward from y=0: 
+1. DIONYSUS: reference top row first; curly dark brown hair, dark beard, grape-and-leaf crown, paired gold horns, purple and gold details.
+2. DIKE: reference top row second; long red hair, curled gold ram horns, gold forehead band, gold details.
+3. ELEUTHERIA: reference top row third; long brown hair, tall antlers, turquoise jeweled crown, turquoise and gold details.
+
+LEFT EDGE, top to bottom centered near y=27%, 50%, 73%, leaning inward from x=0:
+4. MARS: reference top row fourth; red-gold hair and beard, paired gold horns, red and gold details.
+5. VENUS: reference top row fifth; long golden blonde hair, small white flower crown, pink and blue details.
+6. MERCURY: reference top row sixth; tousled black hair, clean-shaven youthful face, blue and gold details.
+
+RIGHT EDGE, top to bottom centered near y=27%, 50%, 73%, leaning inward from x=100%:
+7. PERSEPHONE: reference bottom row first; black wavy hair, dark red rose crown with tiny gold skull, black and gold details.
+8. HERCULES: reference bottom row second; brown face and beard framed by the distinctive golden lion-head hood. The lion head is part of his hood, not a separate character.
+9. APOLLO: reference bottom row third; golden blonde wavy hair, paired small gold horns, white and gold details.
+
+BOTTOM EDGE, left to right at approximately x=23%, 50%, 77%, heads/hands peeking upward from y=100%:
+10. HEPHAESTUS: reference bottom row fourth; dark beard and dark hood, black and metallic gold details.
+11. ATHENA: reference bottom row fifth; purple bob haircut, round gold eyeglasses, blue and gold details; keep a tiny owl detail beside her at the bottom edge, without it reading as a thirteenth person.
+12. ARTEMIS: reference bottom row sixth; long pink braid, gold crescent-moon headband, silver and gold details.
+
+Retain the visual polish of the reference: round large heads, large glossy violet eyes, detailed sculpted hair and beards, warm skin, gleaming gold crowns and jewelry, rich saturated costume accents, soft warm lighting, carefully finished cutout edges. Reduce all characters consistently to suit a peripheral screen-border composition; they should not fill the center or gather in central rows. Count exactly twelve human faces, unique identities, with the assigned three on each edge. No duplicates, no extra characters, no entire bodies, no feet, no text, no captions, no UI, no phone mockup, no watermark, no backdrop, no scenery, no floor, no decorative background sparkle. True alpha transparent PNG.
+
+
+Use case: precise-object-edit.
+Edit target: input image 1, welcome-border.png.
+Replace the entire gray-and-white checkerboard background with a perfectly plain, uniform, opaque near-black background, exact color #050506 (RGB 5, 5, 6). Apply this solid near-black color to the large empty center, the outer edges, every gap between characters, and every background space around hair, crowns, horns and hands. Remove ALL squares, white/gray patterns, texture and checkerboard marks. The background must look like one completely flat solid near-black color across the full image. No gradient, no stars, no texture, no glow, no floor, no border stroke, no phone, no UI, no text.
+
+Preserve the existing twelve characters and owl, their facial identities, poses, sizes, positions, cropping, expressions, eyes, hair, crowns, horns, jewelry, hands, colors, clothing, highlights, detailed cute 3D rendering, and overall tall vertical border composition. Do not add or remove characters or move anything. Keep exactly the same three characters at the top, three on the left, three on the right, and three at the bottom. Change ONLY the background to opaque flat near-black #050506, with clean edges around the characters. Keep the center completely free of objects for HTML interface text.
+
+
+## Cuatro tríadas con tablet en el Oráculo
+
+# Oracle tablet triads
+
+Mode: built-in image_gen. One successful generation per trio. No CLI/API generation.
+
+The Hefesto–Atenea–Artemisa call required two retries after filesystem helper failures before generation. Its successful call used identical reference copies at `work/oracle-tablets/reference-hefesto.png` and `work/oracle-tablets/reference-dde.png`; the exact prompt below was unchanged.
+
+Outputs: three PNG masters and three WebP copies at quality 90, all 1536 × 1024 pixels. WebP conversion uses Sharp with no resize or visual edits.
+
+Visual validation: exactly three identifiable characters per asset, complete heads and feet, black backdrop, one silver tablet with purple grapes and green leaf, no text or Apple logo. All trios retain distinctive costumes and accessories and gather around the tablet.
+
+## triad-marte-venus-mercurio-tablet
+
+Edit target: `C:/Users/conta/Documents/Codex/2026-09-10/https-polyver-2-prototipo-corregido-lucasblaset/work/polyver-3-chat/dist/official/kawaii/triad-marte-venus-mercurio.png`
+
+Supporting tablet reference: `C:/Users/conta/Documents/Codex/2026-09-10/https-polyver-2-prototipo-corregido-lucasblaset/work/polyver-3-chat/dist/official/kawaii/triad-dioniso-dike-eleutheria.png`
+
+Use case: identity-preserve.
+Asset type: final raster character artwork for the Polyver oracle selector.
+Input images: Image 1 is the edit target and exact source for the THREE character identities, costumes, proportions and rendering style. Image 2 is a supporting reference ONLY for the shared tablet interaction and purple-grape symbol; do not import its characters.
+Primary request: Edit Image 1 so its exact three kawaii Greek deities gather close and look together at the screen of ONE tablet held centrally at waist level. The tablet's silver back faces the viewer, its screen faces the characters, and its back bears exactly one clearly visible bunch of PURPLE GRAPES with a small GREEN LEAF, instead of an Apple logo.
+Subject invariants, left to right: Marte with curly copper-gold hair and beard, two golden curved horns, muscular arms, deep red draped tunic and gold armor; Venus with long golden wavy hair, white daisy-and-green-leaf crown, blue long dress, pink cape and purple jewelry; Mercurio with short tousled dark hair, blue-and-gold tunic, purple gemstone belt, golden winged sandals and golden winged caduceus. Keep their same purple eyes, cute faces, skin tones and silhouettes. Venus holds the tablet in both hands; Marte and Mercurio lean slightly toward her and lower their eyes toward its screen. Keep Marte's spear and sword and Mercurio's caduceus visible safely at their outside sides, keeping all three identities recognizable.
+Style/medium: preserve the source's polished detailed kawaii fantasy illustration, soft dimensional shading, rich fabric textures, ornate gold trim, oversized heads and purple eyes.
+Scene/backdrop: uniform PURE BLACK #000000, without scenery or a horizon.
+Composition/framing: LANDSCAPE 3:2 canvas, full-length full-body view of exactly three characters. Fit every head, horn, accessory tip, hand, costume hem and every foot comfortably inside the canvas with generous black breathing room around all outer edges. Center the trio closely as one cohesive group.
+Constraints: one silver tablet only, hands anatomically clean, all three looking at the same tablet. Preserve the exact identities and clothing while changing only interaction and composition. No Apple logo, no lettering, no text, no typography, no UI, no borders, no captions, no extra characters, no cropped heads or feet, no watermark.
+
+## triad-persefone-hercules-apolo-tablet
+
+Edit target: `C:/Users/conta/Documents/Codex/2026-09-10/https-polyver-2-prototipo-corregido-lucasblaset/work/polyver-3-chat/dist/official/kawaii/triad-persefone-hercules-apolo.png`
+
+Supporting tablet reference: `C:/Users/conta/Documents/Codex/2026-09-10/https-polyver-2-prototipo-corregido-lucasblaset/work/polyver-3-chat/dist/official/kawaii/triad-dioniso-dike-eleutheria.png`
+
+Use case: identity-preserve.
+Asset type: final raster character artwork for the Polyver oracle selector.
+Input images: Image 1 is the edit target and exact source for the THREE character identities, costumes, proportions and rendering style. Image 2 is a supporting reference ONLY for the shared tablet interaction and purple-grape symbol; do not import its characters.
+Primary request: Edit Image 1 so its exact three kawaii Greek deities gather close and look together at the screen of ONE tablet held centrally at waist level. The tablet's silver back faces the viewer, its screen faces the characters, and its back bears exactly one clearly visible bunch of PURPLE GRAPES with a small GREEN LEAF, instead of an Apple logo.
+Subject invariants, left to right: Persefone with long black hair, elaborate burgundy rose and gold spike crown with skull ornament, black gold-trimmed gown, purple jewels and small black bat at shoulder; Hercules with brown skin, short dark beard, golden lion-skin hood and mane, muscular arms, black tunic and purple sash, lion-buckle gold belt and sandals; Apolo with wavy golden-blond hair, two golden curved horns, laurel ornament, ivory and gold toga, golden lyre, bow and quiver of arrows, sandals. Keep their same purple eyes, cute faces, skin tones and silhouettes. Hercules holds the tablet in both hands at waist height; Persefone and Apolo lean slightly toward him and lower their eyes toward its screen. Retain Persefone's ornamental handheld skull at the outside, Hercules's gold club resting beside his outer leg, and Apolo's lyre and bow at his outside side or worn securely, avoiding extra arms.
+Style/medium: preserve the source's polished detailed kawaii fantasy illustration, soft dimensional shading, rich fabric textures, ornate gold trim, oversized heads and purple eyes.
+Scene/backdrop: uniform PURE BLACK #000000, without scenery or a horizon.
+Composition/framing: LANDSCAPE 3:2 canvas, full-length full-body view of exactly three characters. Fit every head, horn, crown spike, accessory tip, hand, costume hem and every foot comfortably inside the canvas with generous black breathing room around all outer edges. Center the trio closely as one cohesive group.
+Constraints: one silver tablet only, hands anatomically clean, all three looking at the same tablet. Preserve the exact identities and clothing while changing only interaction and composition. No Apple logo, no lettering, no text, no typography, no UI, no borders, no captions, no extra characters, no cropped heads or feet, no watermark.
+
+## triad-hefesto-atenea-artemisa-tablet
+
+Edit target: `C:/Users/conta/Documents/Codex/2026-09-10/https-polyver-2-prototipo-corregido-lucasblaset/work/polyver-3-chat/dist/official/kawaii/triad-hefesto-atenea-artemisa.png`
+
+Supporting tablet reference: `C:/Users/conta/Documents/Codex/2026-09-10/https-polyver-2-prototipo-corregido-lucasblaset/work/polyver-3-chat/dist/official/kawaii/triad-dioniso-dike-eleutheria.png`
+
+Use case: identity-preserve.
+Asset type: final raster character artwork for the Polyver oracle selector.
+Input images: Image 1 is the edit target and exact source for the THREE character identities, costumes, proportions and rendering style. Image 2 is a supporting reference ONLY for the shared tablet interaction and purple-grape symbol; do not import its characters.
+Primary request: Edit Image 1 so its exact three kawaii Greek deities gather close and look together at the screen of ONE tablet held centrally at waist level. The tablet's silver back faces the viewer, its screen faces the characters, and its back bears exactly one clearly visible bunch of PURPLE GRAPES with a small GREEN LEAF, instead of an Apple logo.
+Subject invariants, left to right: Hefesto with dark brown hair and full beard and curled mustache, black hooded tunic with gold trim, tattooed exposed muscular arm, smith's belt and tool pouch, large grey forging hammer; Atenea with short lavender-purple bob hair, round gold glasses, blue-and-gold tunic, purple gemstone belt, owl companion at shoulder and round gold shield with purple central gem; Artemisa with long rose-red braid, gold moon diadem and moon earrings, white and slate-blue flowing gown with gold stars and crescent moons, moon-buckle belt, gold bow and quiver. Keep their same purple eyes, cute faces, skin tones and silhouettes. Atenea holds the tablet in both hands at waist level; Hefesto and Artemisa lean slightly toward her and lower their eyes toward its screen. Retain Hefesto's hammer at his outside side, Atenea's gold shield strapped at side and owl on shoulder, and Artemisa's bow at her outside side. Replace Atenea's held book with the tablet; do not reproduce any word from the book.
+Style/medium: preserve the source's polished detailed kawaii fantasy illustration, soft dimensional shading, rich fabric textures, ornate gold trim, oversized heads and purple eyes.
+Scene/backdrop: uniform PURE BLACK #000000, without scenery or a horizon.
+Composition/framing: LANDSCAPE 3:2 canvas, full-length full-body view of exactly three characters. Fit every head, accessory tip, hand, costume hem and every foot comfortably inside the canvas with generous black breathing room around all outer edges. Center the trio closely as one cohesive group.
+Constraints: one silver tablet only, hands anatomically clean, all three looking at the same tablet. Preserve the exact identities and clothing while changing only interaction and composition. No Apple logo, no book lettering, no text, no typography, no UI, no borders, no captions, no extra characters, no cropped heads or feet, no watermark.
+
+
+Archivos publicados en `dist/official/kawaii/`: `triad-marte-venus-mercurio-tablet.webp`, `triad-persefone-hercules-apolo-tablet.webp`, `triad-hefesto-atenea-artemisa-tablet.webp`. La primera opción conserva `triad-dioniso-dike-eleutheria.png`.

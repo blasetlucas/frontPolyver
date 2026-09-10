@@ -37,8 +37,26 @@ html[data-theme=day] .onboarding-triad figcaption p{color:#716379}
 html[data-theme=day] .onboarding-triad-selector button{background:#f7f0fb;color:#713b85;border-color:#ad89bf}
 html[data-theme=day] .onboarding-triad-selector button[aria-pressed=true]{background:#7b3f9d;color:white}
 
-/* The welcome illustration shows all twelve without a portrait frame. */
-.welcome .welcome-kawaii-scene{height:auto;display:block;padding:126px 10px 64px;overflow:visible}
-.welcome .welcome-kawaii-scene>img{display:block;width:100%;height:auto;max-width:100%;border:0;border-radius:0;object-fit:contain;object-position:center;transform:none;box-shadow:none}
-.welcome .welcome-kawaii-scene .welcome-line{width:100%;left:0;bottom:28px;justify-content:center}
-.welcome:has(.welcome-kawaii-scene) .welcome-bottom{margin-top:-24px}
+/* Heads and hands surround the whole phone; the middle remains interactive. */
+.welcome-border-screen{isolation:isolate}
+.welcome-border-screen>.welcome-border-art{position:absolute;inset:44px 0 18px;z-index:0;display:block;width:100%;height:calc(100% - 62px);object-fit:fill;pointer-events:none;user-select:none}
+.welcome-border-screen .welcome-center{position:relative;z-index:1;box-sizing:border-box;width:46%;min-height:100%;margin:0 auto;padding:190px 0 156px;display:flex;flex-direction:column;justify-content:center;align-items:stretch;gap:17px}
+.welcome-center>.brand{position:static;transform:none;justify-content:center;gap:8px}
+.welcome-center>.brand img{width:40px;height:40px;border-radius:10px}
+.welcome-center>.brand b{font-size:20px;letter-spacing:.07em}
+.welcome-center>.brand span{font-size:6px;letter-spacing:.12em;white-space:nowrap}
+.welcome-center .welcome-line{position:static;justify-content:center;gap:6px;letter-spacing:.08em;font-size:6px}
+.welcome-center .welcome-bottom{position:relative;min-height:0;margin:0;padding:0;background:none;gap:10px}
+.welcome-center .welcome-bottom h1{font-size:23px;line-height:1.12;margin:0 0 3px}
+.welcome-center .welcome-bottom p{font-size:10px;line-height:1.5;margin:0 0 5px}
+.welcome-center .welcome-bottom small{font-size:8px;line-height:1.45}
+.welcome-center .primary,.welcome-center .secondary{min-height:44px;padding:9px 5px;font-size:11px;border-radius:12px}
+/* Crop inside the source phone, placing Marte's face near the top. */
+.store-shot.marte-shot:before{inset:0;background-size:300% auto;background-position:50% 40%;background-repeat:no-repeat}
+/* Four touch targets with small visible dots. */
+.onboarding-families .onboarding-triad-selector button{width:36px;height:36px;border:0;background:transparent;display:grid;place-items:center}
+.triad-selector-dot{width:9px;height:9px;border-radius:50%;background:#786682;transition:background .15s,transform .15s}
+.onboarding-triad-selector button[aria-pressed=true] .triad-selector-dot{background:#e5bf78;transform:scale(1.3)}
+html[data-theme=day] .onboarding-families .onboarding-triad-selector button{background:transparent}
+html[data-theme=day] .triad-selector-dot{background:#b49bbf}
+html[data-theme=day] .onboarding-triad-selector button[aria-pressed=true] .triad-selector-dot{background:#743c91}
