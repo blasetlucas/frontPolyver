@@ -61,3 +61,24 @@
 [data-theme="night"] .profile-option.selected,[data-theme="night"] .deity-option.selected{background:#30203f;border-color:#ac7dd1}
 [data-theme="night"] .sidebar-scrim{background:#060409ad}
 @media(max-width:760px){.header-right{gap:7px}.theme-toggle{padding:8px;min-width:36px;min-height:40px}.theme-toggle-label{display:none}.chat-identity{min-width:0}.chat-identity small{max-width:36vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.chat-identity>span:last-child{display:none}}
+
+/* The app shell provides global navigation and the appearance control. */
+.embedded-chat .app-shell{height:100dvh;min-height:0}
+.embedded-chat .chat-header{height:66px;padding:7px 10px;gap:6px}
+.embedded-chat .chat-header .theme-toggle,.embedded-chat .prototype-label{display:none}
+.embedded-chat .chat-identity small{max-width:44vw}
+.embedded-chat .thread{padding:20px 14px 10px}
+.embedded-chat .thread-date{margin-bottom:24px;font-size:11px}
+.embedded-chat .message{gap:9px}
+.embedded-chat .message-text{font-size:15px;line-height:1.65}
+.embedded-chat .message-name{gap:6px;font-size:13px;flex-wrap:wrap}
+.embedded-chat .composer-area{padding:8px 11px 8px}
+.embedded-chat .composer{padding:10px 10px 8px 13px}
+.embedded-chat .composer-bottom{margin-top:5px}
+.embedded-chat .demo-note{font-size:10px;margin-top:7px}
+.embedded-chat .suggestions button{min-height:32px;padding:6px 10px}
+.embedded-chat .picker-dialog{padding:17px}
+.embedded-chat .profile-option{padding:11px;gap:10px}
+.embedded-chat .profile-option .avatar.large{width:48px;height:48px}
+.embedded-chat .sidebar{padding-top:18px}
+@media(max-height:480px){.embedded-chat .suggestions{display:none}.embedded-chat .chat-header{height:58px}.embedded-chat .thread-date{display:none}}

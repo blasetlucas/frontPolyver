@@ -182,6 +182,10 @@
   function enhanceProfile() {
     const profileProgress = document.querySelector('.profile-progress');
     if (!profileProgress) return;
+    if (profileProgress.querySelector("img")?.alt !== "Luciano") {
+      document.querySelector(".profile-photo-editor")?.remove();
+      return;
+    }
 
     const content = profileProgress.closest('.content');
     if (!content || content.querySelector('[data-polyver-enhancement="photos"]')) return;

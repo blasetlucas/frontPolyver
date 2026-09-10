@@ -1,0 +1,397 @@
+/* Load after the original prototype CSS and enhancements.css.
+   Only the explicitly selected day theme changes. Cupid/image colors stay native. */
+html[data-theme="day"] {
+  color-scheme: light;
+  --white: #2b2232;
+  --muted: #6e6277;
+  --panel: #ffffff;
+  --panel-2: #f2edf6;
+  --gold: #966323;
+  --gold-light: #805319;
+  --gold-deep: #704615;
+  --purple-light: #7835a7;
+  --line: #dcd2e4;
+  --day-bg: #f7f3fa;
+  --day-surface: #ffffff;
+  --day-soft: #f0e9f5;
+  --day-text: #2b2232;
+  --day-muted: #6e6277;
+  --day-border: #d8cce1;
+  --day-control-border: #9782a8;
+  background: var(--day-bg);
+}
+
+html[data-theme="day"] :is(body, .prototype, .device-stage) {
+  color: var(--day-text);
+  background: var(--day-bg);
+}
+
+html[data-theme="day"] :is(.phone-content, .app-shell, .app-view, .form-screen, .store-screen, .partner-portal, .partner-portal.login, .chat-view) {
+  color: var(--day-text);
+  background: var(--day-bg);
+}
+
+html[data-theme="day"] :is(.app-header, .bottom-nav, .chat-header, .composer, .partner-side) {
+  color: var(--day-text);
+  background: #fffffffa;
+  border-color: var(--day-border);
+}
+
+html[data-theme="day"] .phone:has(.form-screen, .app-shell, .chat-view, .store-screen, .partner-portal) .ios-status {
+  color: var(--day-text);
+}
+
+html[data-theme="day"] :is(.app-header, .app-drawer, .form-screen, .store-screen, .partner-portal) .brand b {
+  color: #75431d;
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+}
+
+html[data-theme="day"] :is(.app-header, .app-drawer, .form-screen, .store-screen, .partner-portal) .brand span {
+  color: var(--day-muted);
+}
+
+html[data-theme="day"] :is(.menu-trigger, .drawer-close) {
+  color: var(--gold-light);
+  background: var(--day-soft);
+  border-color: var(--day-control-border);
+}
+
+html[data-theme="day"] :is(.bottom-nav button, .partner-side button) {
+  color: var(--day-muted);
+}
+
+html[data-theme="day"] :is(.bottom-nav button.active, .partner-side button.active) {
+  color: #6b2b99;
+  background: #eee1f8;
+}
+
+html[data-theme="day"] .app-drawer {
+  color: var(--day-text);
+  background: linear-gradient(165deg, #fff, #f4edf9);
+  border-color: #bfa3d0;
+  box-shadow: 24px 0 60px #39234d33;
+}
+
+html[data-theme="day"] .drawer-header {
+  border-color: var(--day-border);
+}
+
+html[data-theme="day"] .drawer-navigation > button {
+  color: var(--day-text);
+  background: var(--day-surface);
+  border-color: var(--day-border);
+}
+
+html[data-theme="day"] .drawer-navigation > button.active {
+  border-color: var(--module-color);
+  background: color-mix(in srgb, var(--module-color) 12%, white);
+  box-shadow: inset 3px 0 0 var(--module-color);
+}
+
+html[data-theme="day"] .drawer-copy b {
+  color: var(--day-text);
+}
+
+html[data-theme="day"] .drawer-cupid {
+  color: var(--day-text);
+  background: linear-gradient(110deg, #f1e5f8, #fff7e9);
+  border-color: #c9a66d;
+}
+
+/* Keep the module hues, with darker label tints on the light drawer. */
+html[data-theme="day"] .drawer-god {
+  color: color-mix(in srgb, var(--module-color) 58%, #24142e);
+  border-color: color-mix(in srgb, var(--module-color) 55%, #b9a3c5);
+}
+
+html[data-theme="day"] :is(.content p, .drawer-header p, .drawer-copy small, .drawer-number, .drawer-cupid small, .cupid-choice-note, .calendar-title-row small, .calendar-corner, .time-label, .day-head, .day-head span, .cal-legend, .reservation-card small, .metric-card small, .partner-metrics small, .chat-header small, .privacy-note, .benefit-card p, .validation-card p) {
+  color: var(--day-muted);
+}
+
+html[data-theme="day"] :is(.action-card, .profile-row, .safety-row, .calendar-card, .metric-card > div, .partner-metrics > div, .loov-card, .date-card, .partner-card, .feedback-card, .value-chart, .test-card, .private-item, .time-grid, .reservation-card, .benefit-row, .route-row, .booking-summary, .benefit-success, .prepay-status, .profile-progress, .cupid-profile, .private-banner, .alternate-person, .permission-card, .partner-login, .benefit-card, .validation-card, .bar-chart, .profile-photo-editor) {
+  color: var(--day-text);
+  background: var(--day-surface);
+  border-color: var(--day-border);
+  box-shadow: 0 4px 14px #34204306;
+}
+
+html[data-theme="day"] :is(.match-mini, .insight, .friction) {
+  background: #efe5f5;
+}
+
+html[data-theme="day"] :is(.field, .select, .form-screen textarea, .feedback-card textarea, .phone-input input, .phone-input span, .composer input) {
+  color: var(--day-text);
+  background: var(--day-surface);
+  border-color: var(--day-control-border);
+}
+
+html[data-theme="day"] :is(input, textarea)::placeholder {
+  color: var(--day-muted);
+  opacity: 1;
+}
+
+html[data-theme="day"] .select option {
+  color: var(--day-text);
+  background: var(--day-surface);
+}
+
+html[data-theme="day"] .form-screen label {
+  color: var(--day-text);
+}
+
+html[data-theme="day"] .age-note.error {
+  color: #b0263b;
+}
+
+html[data-theme="day"] :is(.privacy-note, .otp span, .date-lead, .reservation-table, .reservation-table button) {
+  border-color: var(--day-border);
+}
+
+html[data-theme="day"] :is(.otp span, .answers button, .chips button, .axis-tags span, .compat-pill, .week-tabs button, .time-grid button, .quick-actions button, .profile-photo-editor__restore) {
+  color: var(--day-text);
+  background: var(--day-soft);
+  border-color: var(--day-control-border);
+}
+
+html[data-theme="day"] :is(.chips button.active, .answers button.selected) {
+  color: #612584;
+  background: #e9d9f4;
+  border-color: #9360b5;
+}
+
+html[data-theme="day"] :is(.week-tabs button.active, .day-head.selected) {
+  color: #fff;
+  background: #72339e;
+  border-color: #72339e;
+}
+
+html[data-theme="day"] .day-head.selected span {
+  color: #f0dfff;
+}
+
+html[data-theme="day"] .time-grid button.free {
+  color: #4c2d0b;
+  background: #f3d3a0;
+  border-color: #a17034;
+}
+
+html[data-theme="day"] .slot:not(.active):not(.busy) {
+  background: #f7f3fa;
+  border-color: #c6b6d1;
+}
+
+html[data-theme="day"] .slot.busy {
+  background: #716879;
+  border-color: #716879;
+}
+
+html[data-theme="day"] .progress {
+  background: #ded3e7;
+}
+
+html[data-theme="day"] .score-orb span {
+  border-left-color: #ddd1e5;
+}
+
+html[data-theme="day"] .radar {
+  background: repeating-radial-gradient(circle, #8b709438 0 1px, transparent 2px 26px);
+  border-color: #bba2ce;
+}
+
+html[data-theme="day"] .primary {
+  color: #fff;
+}
+
+html[data-theme="day"] :is(.form-screen, .content, .partner-portal, .chat-view) .secondary {
+  color: #673183;
+  background: #f2e9f8;
+  border-color: #a185b4;
+}
+
+html[data-theme="day"] :is(.content, .form-screen, .partner-portal) :is(button, input, select, textarea):focus-visible {
+  outline-color: #7937a5;
+}
+
+html[data-theme="day"] .kawaii-guide:not(.polyver-kawaii-scene) {
+  background: linear-gradient(105deg, color-mix(in srgb, var(--guide-color) 13%, white), #fff);
+}
+
+html[data-theme="day"] .kawaii-guide:not(.polyver-kawaii-scene) b {
+  color: var(--day-text);
+}
+
+html[data-theme="day"] .kawaii-guide:not(.polyver-kawaii-scene) small {
+  color: color-mix(in srgb, var(--guide-color) 56%, #24142e);
+}
+
+html[data-theme="day"] .triad-showcase {
+  background: var(--day-surface);
+  box-shadow: 0 7px 22px #4023490d;
+}
+
+html[data-theme="day"] .triad-copy b {
+  color: var(--gold-light);
+}
+
+html[data-theme="day"] .triad-copy small {
+  color: color-mix(in srgb, var(--triad) 58%, #24142e);
+}
+
+html[data-theme="day"] .triad-dots button:not(.active) {
+  border-color: #8b769b;
+}
+
+html[data-theme="day"] .message {
+  color: var(--day-text);
+  background: var(--day-surface);
+  border-color: var(--day-border);
+}
+
+html[data-theme="day"] .message.mine {
+  color: var(--day-text);
+  background: color-mix(in srgb, var(--accent) 13%, white);
+  border-color: color-mix(in srgb, var(--accent) 48%, #b9a3c5);
+}
+
+html[data-theme="day"] .composer button {
+  color: #180d20;
+}
+
+html[data-theme="day"] :is(.private-banner, .status, .floating-confirm) {
+  color: #256437;
+  background: #e5f4e8;
+  border-color: #75a884;
+}
+
+html[data-theme="day"] .validation-card.success {
+  color: var(--day-text);
+  background: #e9f6ec;
+  border-color: #7eac87;
+}
+
+html[data-theme="day"] .private-item > span {
+  color: #fff;
+}
+
+html[data-theme="day"] .safety-row > span {
+  color: #f3cf8b;
+}
+
+html[data-theme="day"] .table-head {
+  color: var(--day-muted);
+  background: var(--day-soft);
+}
+
+html[data-theme="day"] .reservation-table button:hover {
+  background: #f0e8f6;
+}
+
+html[data-theme="day"] .phone .reservation-table button span:nth-child(3),
+html[data-theme="day"] .phone .reservation-table button span:nth-child(4) {
+  color: var(--day-muted);
+}
+
+html[data-theme="day"] .scanner {
+  background: radial-gradient(circle, #e9d6f7, transparent 65%), #fff;
+  border-color: #ac87c3;
+}
+
+html[data-theme="day"] .store-search {
+  color: var(--day-muted);
+  background: #ece6f1;
+}
+
+html[data-theme="day"] :is(.store-search b, .store-listing h2) {
+  color: var(--day-text);
+}
+
+html[data-theme="day"] :is(.store-listing p, .store-meta small, .store-description p) {
+  color: var(--day-muted);
+}
+
+html[data-theme="day"] :is(.store-meta, .store-meta div) {
+  border-color: var(--day-border);
+}
+
+html[data-theme="day"] .store-search button {
+  color: #1d5daf;
+}
+
+html[data-theme="day"] .profile-photo-editor__heading h3 {
+  color: var(--gold-light);
+}
+
+html[data-theme="day"] .profile-photo-editor__heading p {
+  color: var(--day-muted);
+}
+
+html[data-theme="day"] .profile-photo-editor__badge {
+  color: #71359c;
+  background: #eee0f7;
+  border-color: #b28dc7;
+}
+
+html[data-theme="day"] .profile-photo-editor__restore:hover {
+  color: #63307e;
+  background: #eaddf2;
+  border-color: #9472a8;
+}
+
+html[data-theme="day"] .polyver-scroll-rail > button:not(.polyver-scroll-rail__track) {
+  color: #704388;
+  background: #fffaf4f2;
+  border-color: #aa86be;
+  box-shadow: 0 3px 10px #37204722;
+}
+
+html[data-theme="day"] .polyver-scroll-rail > button:not(.polyver-scroll-rail__track):hover:not(:disabled) {
+  color: #fff;
+  background: #793997;
+}
+
+html[data-theme="day"] .polyver-scroll-rail__track::before {
+  background: #9a75af44;
+}
+
+html[data-theme="day"] .polyver-scroll-rail__thumb {
+  background: linear-gradient(#986431, #8c42ad);
+  box-shadow: 0 0 6px #ac7acb33;
+}
+
+/* Dark image scenes retain their original foregrounds and gold/purple accents.
+   No image, photo-slot, QR, per-Cupid accent, or phone hardware is recolored. */
+html[data-theme="day"] :is(.story-panel, .campaign-screen, .splash, .welcome, .reveal-screen, .classic-hero, .chat-hero, .module-grid button, .store-shot, .polyver-kawaii-scene, .map-card, .photo.main) {
+  color-scheme: dark;
+  color: #f8f5f0;
+  --white: #f8f5f0;
+  --muted: #aaa3ae;
+  --gold: #d59b4c;
+  --gold-light: #f3cf8b;
+  --gold-deep: #87541d;
+  --purple-light: #c269ff;
+}
+
+html[data-theme="day"] :is(.reveal-screen, .welcome, .campaign-screen, .splash) .secondary {
+  color: #f8f5f0;
+  background: #ffffff06;
+  border-color: #e8c37e6b;
+}
+
+html[data-theme="day"] .reveal-screen .axis-tags span {
+  color: #d8d2dc;
+  background: #ffffff09;
+  border-color: #ffffff21;
+}
+
+html[data-theme="day"] .reveal-screen :is(.field, .select) {
+  color: #f8f5f0;
+  background: #211a29;
+  border-color: #67516f;
+}
+
+html[data-theme="day"] .reveal-screen .select option {
+  color: #f8f5f0;
+  background: #211a29;
+}

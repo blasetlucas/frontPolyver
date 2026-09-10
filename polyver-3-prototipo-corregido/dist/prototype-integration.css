@@ -1,0 +1,23 @@
+/* The chat occupies the same middle row as all other Polyver modules. */
+.app-shell {grid-template-rows:75px minmax(0,1fr) 70px}
+.app-shell [hidden] {display:none!important}
+.app-scroll,.integrated-chat-slot {min-height:0;min-width:0}
+.integrated-chat-slot {height:100%;overflow:hidden;background:#110d16}
+.integrated-chat-frame {display:block;border:0;width:100%;height:100%;color-scheme:normal}
+.bottom-nav {grid-template-columns:repeat(6,minmax(0,1fr));padding-left:3px;padding-right:3px}
+.bottom-nav button {min-width:0;padding:3px 0;gap:4px;font-size:8px}
+.bottom-nav button[aria-current=page] {color:#e8c181}
+.app-header {grid-template-columns:34px 1fr 70px}
+.integrated-header-actions {display:flex;align-items:center;gap:7px}
+.prototype-theme-toggle {display:grid;place-items:center;flex-shrink:0;width:28px;height:30px;padding:0;border:1px solid #ffffff24;border-radius:10px;color:#eac887;background:#1b1420;font-size:19px;cursor:pointer}
+.phone:has(.has-chat) .polyver-scroll-rail {display:none}
+.integrated-chat-link {width:100%;text-align:left;cursor:pointer}
+.integrated-chat-link .chat-orb {flex-shrink:0;width:42px;height:42px}
+html[data-theme=night] .prototype {background:radial-gradient(ellipse at 50% 45%,#2a1531 0%,#100c15 65%,#0a080d 100%)}
+/* Keep the phone readable on mobile rather than reserving a column for reset. */
+@media(max-width:560px){
+  :root {--polyver-phone-width:min(390px,calc((100dvh - 28px)*390/844),calc(100vw - 28px))}
+  .polyver-reset-wheel {top:auto;bottom:8px;left:8px;width:30px;height:30px;transform:none;opacity:.8}
+  .polyver-reset-wheel span {font-size:21px}
+  .polyver-reset-wheel:hover,.polyver-reset-wheel:active {transform:rotate(-14deg)}
+}

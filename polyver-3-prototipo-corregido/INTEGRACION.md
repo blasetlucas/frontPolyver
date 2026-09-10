@@ -32,3 +32,12 @@ La tarea Polyver 3.3 desarrolla el backend de cuentas, sesiones, perfil visible 
 La interfaz necesitará identidad de usuario, nombre/foto, deidad seleccionada y conversaciones de esa cuenta. La preferencia visual `polyver-appearance` es local al navegador. No se ha conectado la demo visual al backend. El contrato final se coordina con Polyver 3.3 antes de sustituir los perfiles y respuestas de muestra.
 
 Contrato de Polyver 3.1 guardado: https://github.com/blasetlucas/Polyver/blob/codex/12-dioses-prototipo/chatbot/12-dioses/docs/API.md
+
+## Chat integrado con el prototipo completo
+
+La portada abre el chat dentro del prototipo recuperado de Polyver 2. La barra inferior y el menú permiten visitar las aplicaciones sin abandonar la conversación. El iframe del chat permanece montado al cambiar entre módulos. La memoria temporal del documento padre conserva conversaciones y borradores si se abre otro flujo; recargar reinicia los mensajes.
+
+El puente acepta únicamente mensajes de la ventana esperada en el mismo origen, con tipos e IDs conocidos. El shell envía el contexto inicial y el chat publica cambios sólo después de recibirlo. Inicio y Perfil reflejan la identidad de muestra y el Cupido elegido. Los encuentros y reservas originales siguen siendo escenarios de muestra.
+
+Backend guardado: https://github.com/blasetlucas/Polyver/tree/main/backend
+Contrato: https://github.com/blasetlucas/Polyver/blob/main/backend/docs/API.md

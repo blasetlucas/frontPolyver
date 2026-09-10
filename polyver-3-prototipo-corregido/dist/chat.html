@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es" data-theme="night">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0c0a10">
+  <meta name="description" content="Conversa con tu deidad en Polyver. Un espacio para conocerte y conectar.">
+  <title>Polyver · Tu conversación</title>
+  <link rel="icon" href="/polyver-logo.jpeg">
+  <script src="/theme.js"></script>
+  <link rel="stylesheet" href="/chat.css">
+  <script type="module" src="/chat.js"></script>
+</head>
+<body>
+  <a class="skip" href="#message">Ir al mensaje</a>
+  <div class="app-shell">
+    <button class="sidebar-scrim" id="scrim" aria-label="Cerrar menú" hidden></button>
+    <aside class="sidebar" id="sidebar" aria-label="Conversaciones">
+      <div class="brand-row"><a class="brand" href="/" aria-label="Polyver, inicio"><img src="/polyver-logo.jpeg" alt=""><span>POLYVER</span></a><button class="icon-button mobile-only" id="close-menu" aria-label="Cerrar menú" data-icon="close"></button></div>
+      <button class="new-chat" id="new-chat"><span data-icon="edit"></span>Nueva conversación</button>
+      <nav class="primary-nav" aria-label="Navegación principal"><a class="nav-item current" href="/chat.html" aria-current="page"><span data-icon="chat"></span>Mi chat</a><a class="nav-item" href="/recorrido.html"><span data-icon="compass"></span>Explorar Polyver<span class="nav-chevron" data-icon="chevron"></span></a></nav>
+      <div class="history-heading">TUS CONVERSACIONES</div>
+      <div class="history" id="history"></div>
+      <div class="sidebar-bottom">
+        <button class="your-deity" id="sidebar-deity"><span id="sidebar-deity-avatar"></span><span class="person-copy"><small>Tu deidad</small><strong id="sidebar-deity-name">Dioniso</strong></span><span data-icon="chevron"></span></button>
+        <button class="profile-button" id="profile-button"><span id="sidebar-user-avatar"></span><span class="person-copy"><strong id="sidebar-user-name">Luciano</strong><small>Cambiar perfil de muestra</small></span><span data-icon="chevrons"></span></button>
+      </div>
+    </aside>
+    <main class="workspace">
+      <header class="chat-header">
+        <button class="icon-button mobile-only" id="open-menu" aria-controls="sidebar" aria-expanded="false" aria-label="Abrir menú" data-icon="menu"></button>
+        <button class="chat-identity" id="header-deity" aria-label="Cambiar deidad"><span id="header-avatar"></span><span><strong id="header-name">Dioniso</strong><small id="header-trait">Alegría y conexión</small></span><span data-icon="chevron-down"></span></button>
+        <div class="header-right"><span class="prototype-label">PROTOTIPO 3</span><button class="theme-toggle" type="button" data-theme-toggle aria-label="Activar modo día" title="Activar modo día"><span data-theme-icon aria-hidden="true"></span><span class="theme-toggle-label" data-theme-label>Modo día</span></button><button class="mobile-profile" id="mobile-profile" aria-label="Cambiar perfil de muestra"></button></div>
+      </header>
+      <section class="conversation" id="conversation" aria-label="Conversación con tu deidad" tabindex="-1">
+        <div class="thread" id="thread" role="log" aria-live="polite" aria-relevant="additions"></div>
+      </section>
+      <div class="composer-area">
+        <div class="suggestions" id="suggestions" aria-label="Ideas para conversar"></div>
+        <form class="composer" id="composer">
+          <label class="sr-only" for="message">Tu mensaje para la deidad</label>
+          <textarea id="message" placeholder="Escríbele a Dioniso…" rows="1" maxlength="4000" enterkeyhint="send" aria-describedby="demo-note"></textarea>
+          <div class="composer-bottom"><span class="composer-recipient"><span class="small-spark" data-icon="spark"></span><span id="recipient">Conversando con Dioniso</span></span><button class="send-button" id="send" type="submit" aria-label="Enviar mensaje" disabled data-icon="arrow-up"></button></div>
+        </form>
+        <p class="demo-note" id="demo-note">Demo interactiva · Respuestas de ejemplo<span class="desktop-hint"> · Enter para enviar</span></p>
+      </div>
+    </main>
+  </div>
+  <dialog id="profile-dialog" class="picker-dialog" aria-labelledby="profile-title">
+    <div class="dialog-top"><div><p class="eyebrow">PERFILES DE MUESTRA</p><h2 id="profile-title">¿Quién conversa hoy?</h2></div><button class="icon-button" data-close="profile-dialog" aria-label="Cerrar perfiles" data-icon="close"></button></div>
+    <div class="profile-options" id="profile-options"></div>
+  </dialog>
+  <dialog id="deity-dialog" class="picker-dialog deity-dialog" aria-labelledby="deity-title">
+    <div class="dialog-top"><div><p class="eyebrow">TUS 12 CUPIDOS</p><h2 id="deity-title">Elige con quién conversar</h2></div><button class="icon-button" data-close="deity-dialog" aria-label="Cerrar deidades" data-icon="close"></button></div>
+    <div class="deity-options" id="deity-options"></div>
+  </dialog>
+  <noscript>Activa JavaScript para conversar en este prototipo de Polyver.</noscript>
+</body>
+</html>

@@ -25,15 +25,14 @@
     });
   }
   apply();
-  document.addEventListener('DOMContentLoaded', () => {
+  window.PolyverTheme = {refresh:apply};
+  document.addEventListener('DOMContentLoaded', apply);
+  // Delegation also supports the controls mounted later by the prototype's React shell.
+  document.addEventListener('click', event => {
+    if (!event.target.closest('[data-theme-toggle]')) return;
+    mode = mode === 'night' ? 'day' : 'night';
+    try { localStorage.setItem(key, mode); } catch { /* Switching still works without persistence. */ }
     apply();
-    document.querySelectorAll('[data-theme-toggle]').forEach(button => {
-      button.addEventListener('click', () => {
-        mode = mode === 'night' ? 'day' : 'night';
-        try { localStorage.setItem(key, mode); } catch { /* Switching still works without persistence. */ }
-        apply();
-      });
-    });
   });
   window.addEventListener('storage', event => {
     if (event.key === key || event.key === null) {
