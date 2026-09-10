@@ -193,70 +193,6 @@
     profileProgress.insertAdjacentElement('afterend', createPhotoEditor());
   }
 
-  const kawaiiScenes = {
-    'Te enviamos un código': {
-      id: 'verification',
-      asset: '/official/kawaii/triad-marte-venus-mercurio.png',
-      names: 'Marte · Venus · Mercurio',
-      label: 'Seguridad · afecto · agilidad',
-    },
-    '¿Dónde quieres conectar?': {
-      id: 'location',
-      asset: '/official/kawaii/triad-marte-venus-mercurio.png',
-      names: 'Mercurio kawaii',
-      label: 'Cercanía ágil y sin fricción',
-    },
-    'Nos enfocamos en ti': {
-      id: 'privacy',
-      asset: '/official/kawaii/triad-persefone-hercules-apolo.png',
-      names: 'Perséfone · Hércules · Apolo',
-      label: 'Profundidad · constancia · creatividad',
-    },
-    'Primero, una presentación': {
-      id: 'identity',
-      asset: '/official/kawaii/triad-hefesto-atenea-artemisa.png',
-      names: 'Atenea · Artemisa · Hefesto',
-      label: 'Cooperación · estrategia · selectividad',
-    },
-    'Muestra quién eres': {
-      id: 'photos',
-      asset: '/official/kawaii/triad-marte-venus-mercurio.png',
-      names: 'Venus kawaii',
-      label: 'Presentación auténtica y afectividad',
-    },
-  };
-
-  function enhancePreselectionKawaii() {
-    document.querySelectorAll('.form-screen .kawaii-guide').forEach((guide) => {
-      if (guide.dataset.polyverKawaiiScene) return;
-
-      const screen = guide.closest('.form-screen');
-      const heading = screen?.querySelector('h2')?.textContent?.trim();
-      const scene = kawaiiScenes[heading];
-      if (!scene) return;
-
-      guide.dataset.polyverKawaiiScene = scene.id;
-      guide.classList.add('polyver-kawaii-scene');
-      guide.setAttribute('aria-label', `Cupidos kawaii: ${scene.names}. ${scene.label}.`);
-
-      const image = document.createElement('img');
-      image.className = 'polyver-kawaii-scene__image';
-      image.src = scene.asset;
-      image.alt = `Versiones kawaii de ${scene.names}`;
-
-      const copy = guide.querySelector('span:not(.kawaii-avatar)');
-      const small = copy?.querySelector('small');
-      if (small) small.textContent = scene.names;
-
-      const label = document.createElement('em');
-      label.className = 'polyver-kawaii-scene__label';
-      label.textContent = scene.label;
-      copy?.append(label);
-
-      guide.prepend(image);
-    });
-  }
-
   function changeCupid(direction) {
     const select = document.querySelector('#cupid-selector');
     if (!select || select.options.length < 2) return;
@@ -436,7 +372,6 @@
   addResetWheel();
   enhanceProfile();
   enhanceProfileBuilder();
-  enhancePreselectionKawaii();
   addCupidCarousel();
   addScrollRail();
 
@@ -444,10 +379,10 @@
     addResetWheel();
     enhanceProfile();
     enhanceProfileBuilder();
-    enhancePreselectionKawaii();
-    addCupidCarousel();
+      addCupidCarousel();
     addScrollRail();
   });
   observer.observe(document.body, { childList: true, subtree: true });
+  document.addEventListener('toggle', () => window.requestAnimationFrame(updateScrollRail), true);
   window.addEventListener('resize', updateScrollRail, { passive: true });
 })();

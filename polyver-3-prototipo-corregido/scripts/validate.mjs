@@ -17,7 +17,7 @@ for(const name of ['index.html','chat.html','recorrido.html','prototype/index.ht
     assert(fs.existsSync(target),`Missing asset: ${name} -> ${ref}`);references++;
   }
 }
-for(const name of ['chat.js','chat-model.js','theme.js','enhancements.js','prototype-chat.js','integration-contract.js','assets/page-polyver3-integrated.js','assets/index-polyver3-integrated.js'])execFileSync(process.execPath,['--check',path.join(root,name)]);
+for(const name of ['chat.js','chat-model.js','theme.js','enhancements.js','prototype-chat.js','integration-contract.js','assets/page-polyver3-onboarding.js','assets/index-polyver3-onboarding.js'])execFileSync(process.execPath,['--check',path.join(root,name)]);
 for(const p of people){
   assert(fs.existsSync(path.join(root,`official/people/${p.id}.jpg`)));
   for(const d of deities){
@@ -42,7 +42,7 @@ function checkModule(relative){
   assert(!source.includes('index-Bvdw6A10.js')&&!source.includes('page-DcBYk7Ef.js'),`Old bootstrap reachable from ${relative}`);
   for(const match of source.matchAll(/["'`]((?:\.\.?\/)[^"'`]+\.js)["'`]/g))checkModule(path.relative(root,path.resolve(path.dirname(file),match[1])));
 }
-checkModule('assets/index-polyver3-integrated.js');
+checkModule('assets/index-polyver3-onboarding.js');
 checkModule('chat.js');
 console.log(`Validated ${visited.size} reachable JavaScript modules; only the integrated bootstrap is reachable.`);
 console.log(`Validated 4 entrypoints, ${references} asset references, JS syntax, control IDs, and 36 profile/deity combinations.`);

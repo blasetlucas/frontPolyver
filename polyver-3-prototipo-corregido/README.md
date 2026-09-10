@@ -8,7 +8,7 @@ Tercer prototipo de Polyver. El chat con la deidad es la interfaz principal: con
 
 ## Apariencia
 
-El modo noche es la apariencia inicial, independientemente del ajuste del dispositivo. El botón «Modo día» permite cambiar a la apariencia clara y luego volver a «Modo noche». La elección se guarda únicamente en este navegador; cambiar de perfil o de conversación no la altera.
+El modo noche es la apariencia inicial, independientemente del ajuste del dispositivo. El control de apariencia está dentro de **Inicio → Opciones de Dioniso**. Allí se puede activar «Modo día» o volver a «Modo noche»; no aparece permanentemente en el chat ni en la cabecera. La elección se guarda únicamente en este navegador; cambiar de perfil o de conversación no la altera.
 
 ## Probar el prototipo
 
@@ -55,6 +55,12 @@ node --test scripts/integration.test.mjs
 
 Copia del código guardado en [frontPolyver/prototipo-web](https://github.com/blasetlucas/frontPolyver/tree/main/prototipo-web), commit `59cec828aed67d61c3b3306ccaaac019f3b96295`, correspondiente al [segundo prototipo](https://polyver-2-prototipo-corregido.lucasblaset.chatgpt.site/).
 
-Se conservan `app/`, `public/`, la configuración y las dependencias de la versión base como referencia. `CODIGO-PROTOTIPO.md` documenta esa base anterior. Los archivos actuales del chat se encuentran en `dist/`. Los bundles originales se conservan como referencia. `dist/assets/page-polyver3-integrated.js` y `index-polyver3-integrated.js` son las copias adaptadas que integran el chat en la navegación original; el componente nuevo se mantiene legible en `prototype-chat.js`.
+Se conservan `app/`, `public/`, la configuración y las dependencias de la versión base como referencia. `CODIGO-PROTOTIPO.md` documenta esa base anterior. Los archivos actuales del chat se encuentran en `dist/`. Los bundles originales se conservan como referencia. `dist/assets/page-polyver3-onboarding.js` y `index-polyver3-onboarding.js` son las copias adaptadas que integran el chat en la navegación original; el componente nuevo se mantiene legible en `prototype-chat.js`.
 
 El tercer prototipo tiene una publicación independiente. No reemplaza el segundo prototipo ni su carpeta en GitHub.
+
+## Tríadas kawaii del ingreso
+
+Las ilustraciones se renderizan a partir del paso activo, evitando conservar por error la imagen de la pantalla anterior. Teléfono e identidad muestran a Hefesto, Atenea y Artemisa; verificación, ubicación y fotos muestran a Marte, Venus y Mercurio; privacidad muestra a Perséfone, Hércules y Apolo. Los tres personajes se muestran juntos.
+
+El Oráculo mantiene las cuatro familias y empieza con la escena original de Dioniso, Díke y Eleutheria mirando la tablet con el racimo de uvas. `dist/onboarding-scenes.js` centraliza esta presentación y `dist/prototype-options.js` contiene las opciones de Dioniso.
