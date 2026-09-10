@@ -60,3 +60,13 @@ html[data-theme=day] .onboarding-triad-selector button[aria-pressed=true]{backgr
 html[data-theme=day] .onboarding-families .onboarding-triad-selector button{background:transparent}
 html[data-theme=day] .triad-selector-dot{background:#b49bbf}
 html[data-theme=day] .onboarding-triad-selector button[aria-pressed=true] .triad-selector-dot{background:#743c91}
+
+/* Appearance belongs to the greeting row on Dioniso's Home screen. */
+.home-greeting-row{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:34px;margin:0 0 4px}
+.home-greeting-row .eyebrow{margin:0;min-width:0}
+.home-theme-toggle{display:grid;place-items:center;flex:0 0 34px;width:34px;height:34px;padding:0;border:1px solid #ac88414d;border-radius:50%;background:#24182e80;color:#fff;cursor:pointer;line-height:1}
+.home-theme-toggle [data-theme-emoji]{display:block;font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif;font-size:20px;line-height:1}
+.home-theme-toggle:hover{background:#4c2d60}
+.home-theme-toggle:focus-visible{outline:2px solid #edc57c;outline-offset:3px}
+html[data-theme=day] .home-theme-toggle{background:#f4eaf9;border-color:#b999c7;color:#31213a}
+html[data-theme=day] .home-theme-toggle:hover{background:#e6d3f0}

@@ -20,6 +20,8 @@
       button.title = `Activar ${label.toLowerCase()}`;
       const text = button.querySelector('[data-theme-label]');
       if (text) text.textContent = label;
+      const emoji = button.querySelector('[data-theme-emoji]');
+      if (emoji) emoji.textContent = next === 'day' ? '☀️' : '🌙';
       const icon = button.querySelector('[data-theme-icon]');
       if (icon) icon.innerHTML = `<svg viewBox="0 0 24 24" aria-hidden="true">${icons[next]}</svg>`;
     });

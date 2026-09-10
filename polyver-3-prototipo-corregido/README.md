@@ -8,7 +8,7 @@ Tercer prototipo de Polyver. El chat con la deidad es la interfaz principal: con
 
 ## Apariencia
 
-El modo noche es la apariencia inicial, independientemente del ajuste del dispositivo. El control de apariencia está dentro de **Inicio → Opciones de Dioniso**. Allí se puede activar «Modo día» o volver a «Modo noche»; no aparece permanentemente en el chat ni en la cabecera. La elección se guarda únicamente en este navegador; cambiar de perfil o de conversación no la altera.
+El modo noche es la apariencia inicial, independientemente del ajuste del dispositivo. En **Inicio (Dioniso)**, a la derecha de «Hola, Luciano», el botón ☀️ activa «Modo día» y 🌙 vuelve a «Modo noche». La elección se guarda únicamente en este navegador; cambiar de perfil o de conversación no la altera.
 
 ## Probar el prototipo
 
@@ -55,7 +55,7 @@ node --test scripts/integration.test.mjs
 
 Copia del código guardado en [frontPolyver/prototipo-web](https://github.com/blasetlucas/frontPolyver/tree/main/prototipo-web), commit `59cec828aed67d61c3b3306ccaaac019f3b96295`, correspondiente al [segundo prototipo](https://polyver-2-prototipo-corregido.lucasblaset.chatgpt.site/).
 
-Se conservan `app/`, `public/`, la configuración y las dependencias de la versión base como referencia. `CODIGO-PROTOTIPO.md` documenta esa base anterior. Los archivos actuales del chat se encuentran en `dist/`. Los bundles originales se conservan como referencia. `dist/assets/page-polyver3-border.js` y `index-polyver3-border.js` son las copias adaptadas que integran el chat en la navegación original; el componente nuevo se mantiene legible en `prototype-chat.js`.
+Se conservan `app/`, `public/`, la configuración y las dependencias de la versión base como referencia. `CODIGO-PROTOTIPO.md` documenta esa base anterior. Los archivos actuales del chat se encuentran en `dist/`. Los bundles originales se conservan como referencia. `dist/assets/page-polyver3-appearance.js` y `index-polyver3-appearance.js` son las copias adaptadas que integran el chat en la navegación original; el componente nuevo se mantiene legible en `prototype-chat.js`.
 
 El tercer prototipo tiene una publicación independiente. No reemplaza el segundo prototipo ni su carpeta en GitHub.
 
@@ -63,7 +63,7 @@ El tercer prototipo tiene una publicación independiente. No reemplaza el segund
 
 Las ilustraciones se renderizan a partir del paso activo, evitando conservar por error la imagen de la pantalla anterior. Marte, Venus y Mercurio aparecen solamente en verificación; Perséfone, Hércules y Apolo, solamente en privacidad; Hefesto, Atenea y Artemisa, solamente en identidad. La única tríada que se repite es Dioniso, Díke y Eleutheria, que acompaña teléfono, ubicación, fotos y Oráculo. Los tres personajes se muestran juntos.
 
-El Oráculo vuelve a ofrecer las cuatro tríadas mediante cuatro circulitos seleccionables. Cada tríada mira una tablet con un racimo de uvas; conserva la escena original de Dioniso, Díke y Eleutheria y añade poses equivalentes para las otras tres. Ubicación y fotos utilizan nuevas poses de estos mismos tres personajes, con un mapa y una selfie, respectivamente. `dist/tablet-scenes.js` centraliza esta presentación y `dist/prototype-options.js` contiene las opciones de Dioniso.
+El Oráculo vuelve a ofrecer las cuatro tríadas mediante cuatro circulitos seleccionables. Cada tríada mira una tablet con un racimo de uvas; conserva la escena original de Dioniso, Díke y Eleutheria y añade poses equivalentes para las otras tres. Ubicación y fotos utilizan nuevas poses de estos mismos tres personajes, con un mapa y una selfie, respectivamente. `dist/tablet-scenes.js` centraliza esta presentación y `dist/home-appearance.js` contiene el botón de apariencia junto al saludo de Inicio (Dioniso).
 
 Las escenas kawaii usan el ancho completo de su tarjeta, sin heredar el círculo de los avatares. Los tres nombres permanecen en una sola fila y ajustan su tamaño al ancho de la tarjeta.
 
@@ -72,3 +72,7 @@ La bienvenida reúne a los 12 Cupidos kawaii asomándose desde los cuatro bordes
 [Ilustraciones y prompts de creación](IMAGENES.md).
 
 En la App Store simulada, la tarjeta de Marte recorta el interior de la pantalla original: su cara queda más arriba y no aparece la mesa que rodeaba al iPhone.
+
+## Apariencia en Inicio (Dioniso)
+
+A la derecha de «Hola, Luciano» (o el perfil seleccionado) hay un botón pequeño: ☀️ activa el modo día y 🌙 vuelve al modo noche. El control siempre refleja la acción siguiente, también al regresar a Inicio. La elección sigue guardada en el dispositivo y sincronizada entre el prototipo y el chat. Reemplaza el antiguo desplegable que quedaba más abajo en Inicio.
