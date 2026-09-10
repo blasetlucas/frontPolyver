@@ -7,3 +7,57 @@
 @media(max-width:1050px){.sidebar{width:235px;padding-inline:13px}.chat-header{padding-inline:24px}.thread,.composer-area{padding-left:25px;padding-right:25px}.brand span{font-size:21px}}
 @media(max-width:760px){.app-shell{min-height:0}.sidebar{position:fixed;inset:0 auto 0 0;z-index:11;width:min(300px,85vw);transform:translateX(-101%);transition:transform .2s;box-shadow:10px 0 40px #22172c14;padding-top:max(25px,env(safe-area-inset-top))}.sidebar.open{transform:translateX(0)}.sidebar-scrim{position:fixed;inset:0;background:#241a375c;z-index:10}.mobile-only{display:grid}.mobile-profile{display:block;padding:0}.chat-header{height:78px;padding:8px 13px;gap:7px}.chat-identity{gap:10px;padding:3px;flex:1}.chat-identity strong{font-size:16px}.chat-identity small{font-size:12px}.chat-identity>span:last-child{margin-left:0}.prototype-label{display:none}.header-right{gap:0}.chat-header .avatar{width:35px;height:35px}.thread{padding:24px 18px 15px}.thread-date{margin:0 0 29px;font-size:12px}.message{gap:11px;margin-bottom:24px}.message .avatar{width:33px;height:33px}.message-name{font-size:14px;margin-bottom:8px}.message-text{font-size:16px;line-height:1.7}.message.user{margin:26px 0}.message.user .message-content{max-width:82%}.message.user .message-text{padding:12px 15px}.composer-area{padding:10px 14px max(12px,env(safe-area-inset-bottom))}.composer{padding:12px 12px 9px 15px;border-radius:18px}.composer textarea{font-size:16px}.suggestions{gap:7px;flex-wrap:nowrap;overflow-x:auto;padding-bottom:10px;scrollbar-width:none}.suggestions button{white-space:nowrap;font-size:12px;padding:8px 11px;min-height:36px}.composer-recipient{font-size:11px}.demo-note{font-size:11px;margin-top:9px}.desktop-hint{display:none}.picker-dialog{padding:21px}.dialog-top h2{font-size:24px}.deity-options{grid-template-columns:1fr 1fr;gap:7px}.deity-option{flex-direction:column;align-items:flex-start;gap:9px;padding:13px}.deity-option small{font-size:12px}.deity-option strong{font-size:14px}.deity-marker{font-size:10px}.send-button{width:38px;height:38px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Appearance: night is the default; day is an explicit, remembered choice. */
+.theme-toggle{display:flex;align-items:center;justify-content:center;gap:8px;min-height:40px;padding:8px 12px;border:1px solid var(--line);border-radius:10px;font-size:14px;white-space:nowrap;color:var(--purple-dark);background:var(--panel)}
+.theme-toggle:hover{background:var(--light-purple)}
+.theme-toggle svg{width:18px;height:18px}
+:root[data-theme="night"]{--ink:#f4edf9;--muted:#b6aabd;--purple:#ba83ee;--purple-dark:#d5acf5;--line:#342b3f;--panel:#121017;--light-purple:#2c203b;--gold:#e4b875;color-scheme:dark;scrollbar-color:#554363 #121017}
+[data-theme="night"] body{background:#0c0a10}
+[data-theme="night"] .skip{background:#21182c;color:#f4edf9}
+[data-theme="night"] .brand span{color:#e4b875}
+[data-theme="night"] .new-chat{background:#21162d;border-color:#604075;color:#e0bcfa}
+[data-theme="night"] .new-chat:hover{background:#302040}
+[data-theme="night"] .nav-item{color:#c3b5d0}
+[data-theme="night"] .nav-item:hover,[data-theme="night"] .history-item:hover,[data-theme="night"] .history-item.active{background:#211a2a}
+[data-theme="night"] .nav-item.current{background:#2c1d3b;color:#dfb8ff}
+[data-theme="night"] .history-heading{color:#ad9bbd}
+[data-theme="night"] .your-deity{background:#1a151f;border-color:#3d2e49}
+[data-theme="night"] .your-deity:hover,[data-theme="night"] .profile-button:hover{background:#261b32}
+[data-theme="night"] .avatar{background:#342542;box-shadow:0 0 0 1px #d9a8f32b}
+[data-theme="night"] .workspace{background:linear-gradient(180deg,#110d18 0,#0c0a10 230px)}
+[data-theme="night"] .chat-header{border-color:#2a2232}
+[data-theme="night"] .chat-identity:hover{background:#201729}
+[data-theme="night"] .chat-identity>span:last-child{color:#b4a0c4}
+[data-theme="night"] .prototype-label{color:#b6a1c7;border-color:#3b2d47}
+[data-theme="night"] .thread-date{color:#ad9db9}
+[data-theme="night"] .thread-date:before,[data-theme="night"] .thread-date:after{background:#3c2f47}
+[data-theme="night"] .deity-marker{border-color:#5c472d;background:#201911}
+[data-theme="night"] .message-text{color:#e4dbea}
+[data-theme="night"] .message.user .message-name{color:#c8b6d6}
+[data-theme="night"] .message.user .message-text{background:#2c1d3c;border-color:#4b335f;color:#edddfa}
+[data-theme="night"] .message-actions button{color:#b5a2c4}
+[data-theme="night"] .message-actions button:hover{background:#251a30;color:#d6acf8}
+[data-theme="night"] .composer-area{background:#0c0a10}
+[data-theme="night"] .suggestions button{background:#15101c;border-color:#41304f;color:#cebadc}
+[data-theme="night"] .suggestions button:hover{background:#2a1b39;border-color:#85609d}
+[data-theme="night"] .composer{background:#19131f;border-color:#806890;box-shadow:0 6px 28px #0003}
+[data-theme="night"] .composer:focus-within{border-color:#b482dc;box-shadow:0 0 0 3px #b67af414}
+[data-theme="night"] .composer textarea::placeholder{color:#b2a0bf}
+[data-theme="night"] .composer-recipient{color:#b6a0c6}
+[data-theme="night"] .small-spark svg{color:#c795ec}
+[data-theme="night"] .send-button{background:#8242b1;color:#fff}
+[data-theme="night"] .send-button:hover{background:#9657c5}
+[data-theme="night"] .send-button:disabled{background:#392848;color:#b69bc8}
+[data-theme="night"] .demo-note{color:#aa99b7}
+[data-theme="night"] .icon-button{color:#c5aed6}
+[data-theme="night"] .icon-button:hover{background:#2b1e38}
+[data-theme="night"] .typing-label{color:#c0a8d0}
+[data-theme="night"] .typing-dots i{background:#c18dea}
+[data-theme="night"] .picker-dialog{background:#17111e;border-color:#4e365e;box-shadow:0 20px 80px #0009}
+[data-theme="night"] .picker-dialog::backdrop{background:#050309b8}
+[data-theme="night"] .eyebrow{color:#c399e0}
+[data-theme="night"] .profile-option:hover,[data-theme="night"] .deity-option:hover{background:#271b33;border-color:#89649f}
+[data-theme="night"] .profile-option.selected,[data-theme="night"] .deity-option.selected{background:#30203f;border-color:#ac7dd1}
+[data-theme="night"] .sidebar-scrim{background:#060409ad}
+@media(max-width:760px){.header-right{gap:7px}.theme-toggle{padding:8px;min-width:36px;min-height:40px}.theme-toggle-label{display:none}.chat-identity{min-width:0}.chat-identity small{max-width:36vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.chat-identity>span:last-child{display:none}}

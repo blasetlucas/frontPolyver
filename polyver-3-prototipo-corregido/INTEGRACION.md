@@ -24,3 +24,11 @@ Verificar el contrato final en la documentación del motor antes de conectar un 
 No se conecta el sitio hospedado al servidor local de LM Studio. No se publican sesiones, claves, PIN, tokens ni datos íntimos. La foto de Perséfone en el selector visual no implementa un bloqueo de seguridad: su espacio privado real pertenece al cliente y al motor de Polyver 3.1. El sitio indica que se trata de una demostración y no extrae datos del usuario.
 
 La futura integración debe conservar la separación del perfil general y el ámbito privado, el bloqueo al salir y la invalidación de respuestas atrasadas descritos por el motor. No se debe simular biometría ni solicitar el código de bloqueo del teléfono dentro de un formulario web.
+
+## Backend de cuentas · Polyver 3.3
+
+La tarea Polyver 3.3 desarrolla el backend de cuentas, sesiones, perfil visible y elección de Cupido en TypeScript/Fastify/PostgreSQL, dentro de `Polyver/backend`. Para la siguiente integración, el backend relacionará la cuenta autenticada con la sesión del motor; el motor de Polyver 3.1 conservará inicialmente la escritura de la entrevista, el perfil extraído y el espacio privado de Perséfone.
+
+La interfaz necesitará identidad de usuario, nombre/foto, deidad seleccionada y conversaciones de esa cuenta. La preferencia visual `polyver-appearance` es local al navegador. No se ha conectado la demo visual al backend. El contrato final se coordina con Polyver 3.3 antes de sustituir los perfiles y respuestas de muestra.
+
+Contrato de Polyver 3.1 guardado: https://github.com/blasetlucas/Polyver/blob/codex/12-dioses-prototipo/chatbot/12-dioses/docs/API.md

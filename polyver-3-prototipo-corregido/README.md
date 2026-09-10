@@ -6,6 +6,10 @@
 
 Tercer prototipo de Polyver. El chat con la deidad es la interfaz principal: conversación sencilla, nombre y retrato circular junto a cada mensaje, y la fotografía del usuario.
 
+## Apariencia
+
+El modo noche es la apariencia inicial, independientemente del ajuste del dispositivo. El botón «Modo día» permite cambiar a la apariencia clara y luego volver a «Modo noche». La elección se guarda únicamente en este navegador; cambiar de perfil o de conversación no la altera.
+
 ## Probar el prototipo
 
 - La conversación de muestra comienza con Luciano y Atenea, la selección inicial del prototipo anterior.
