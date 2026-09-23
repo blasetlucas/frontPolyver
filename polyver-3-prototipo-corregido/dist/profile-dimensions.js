@@ -32,11 +32,24 @@ export function createProfileDimensions(React, jsx) {
     const inputs=React.useRef([]);
     const [digits,setDigits]=React.useState(['','','']);
     const [error,setError]=React.useState('');
-    React.useEffect(()=>{
+    React.useLayoutEffect(()=>{
       const node=dialog.current;
+      const phone=node.closest('.phone-content');
+      const position=()=>{
+        const rect=phone?.getBoundingClientRect();
+        if(!rect)return;
+        node.style.setProperty('--pin-x',`${rect.left+rect.width/2}px`);
+        node.style.setProperty('--pin-y',`${rect.top+rect.height/2}px`);
+        node.style.setProperty('--pin-width',`${Math.min(260,Math.max(0,rect.width-28))}px`);
+        node.style.setProperty('--pin-max-height',`${Math.max(0,rect.height-28)}px`);
+      };
       node.showModal();
-      inputs.current[0]?.focus();
-      return ()=>{if(node.open)node.close();};
+      position();
+      inputs.current[0]?.focus({preventScroll:true});
+      const observer=new ResizeObserver(position);
+      if(phone)observer.observe(phone);
+      window.addEventListener('resize',position);
+      return ()=>{observer.disconnect();window.removeEventListener('resize',position);if(node.open)node.close();};
     },[]);
     function apply(next,index) {
       setDigits(next); setError('');

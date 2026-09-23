@@ -8,13 +8,14 @@ html[data-theme] .app-view.dimension-screen {background:#08060b;color:#f5e6d9;mi
 .dimension-art:focus-visible {outline:2px solid #f1be6b;outline-offset:-3px}
 .dimension-screen h2 {font-family:Georgia,'Times New Roman',serif;font-weight:400;color:#f2d7a4}
 .dimension-screen button, .dimension-screen input {-webkit-tap-highlight-color:transparent}
-.spectrum-controls {padding:0 18px}
+.spectrum-controls {padding:0 18px;container-type:inline-size}
 .spectrum-intro {display:flex;align-items:center;gap:12px;border-bottom:1px solid #b0835659;padding:12px 0}
 .spectrum-intro p {font:12px/1.5 system-ui,sans-serif;color:#c3b2c9;margin:0;flex:1}
 .dimension-lock {font:12px system-ui,sans-serif;color:#dbb480;border:1px solid #aa784b63;border-radius:6px;min-height:36px;padding:6px 10px;background:#201524}
 .spectrum-row {padding:19px 0 16px;border-bottom:1px solid #b0835659}
 .spectrum-row h2 {text-align:center;font-size:15px;line-height:1.4;margin:0 0 13px;color:#e8d5e5}
-.spectrum-endpoints {display:grid;grid-template-columns:1fr 1fr 1fr;align-items:end;gap:5px;font-size:12px;line-height:1.45;color:#eedbd4;min-height:34px}
+.spectrum-endpoints {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:end;gap:5px;font-size:min(11px,3.35cqw);line-height:1.45;color:#eedbd4;min-height:28px}
+.spectrum-endpoints span {min-width:0;white-space:nowrap}
 .spectrum-endpoints span:nth-child(2){text-align:center}
 .spectrum-endpoints span:last-child{text-align:right}
 .heart-slider {display:block;-webkit-appearance:none;appearance:none;width:100%;height:44px;margin:0;background:transparent;cursor:ew-resize;touch-action:pan-y}
@@ -37,26 +38,26 @@ html[data-theme] .app-view.dimension-screen {background:#08060b;color:#f5e6d9;mi
 .spectrum-lock-message h2 {font-size:25px;margin:10px 0}
 .spectrum-lock-message p {font:14px/1.6 system-ui,sans-serif;color:#d0bfd5}
 .spectrum-lock-message button {min-height:44px;padding:10px 24px;color:#f5dbc6;border:1px solid #ba8e67;border-radius:8px;background:#27142b;font:14px system-ui,sans-serif}
-.persefone-pin {position:fixed;inset:0;margin:auto;box-sizing:border-box;width:min(294px,calc(100% - 38px));max-height:90dvh;padding:25px 22px 15px;border:1px solid #b88a62;border-radius:14px;color:#f5e1d5;background:linear-gradient(130deg,#23132b,#0d0912);box-shadow:0 20px 90px #000b}
+.persefone-pin {position:fixed;inset:auto;left:var(--pin-x,50%);top:var(--pin-y,50%);transform:translate(-50%,-50%);margin:0;box-sizing:border-box;width:var(--pin-width,260px);max-width:calc(100vw - 28px);max-height:var(--pin-max-height,90dvh);padding:22px 16px 10px;border:1px solid #b88a62;border-radius:12px;color:#f5e1d5;background:linear-gradient(130deg,#23132b,#0d0912);box-shadow:0 20px 90px #000b}
 .persefone-pin::backdrop {background:#07050b65}
-.persefone-pin h2 {font:22px/1.3 Georgia,serif;color:#f2d4a4;text-align:center;margin:0 0 8px}
-.persefone-pin p {font:12px/1.5 system-ui,sans-serif;text-align:center;color:#cbb4d0;margin:0}
+.persefone-pin h2 {font:18px/1.3 Georgia,serif;color:#f2d4a4;text-align:center;margin:0 0 7px}
+.persefone-pin p {font:11px/1.5 system-ui,sans-serif;text-align:center;color:#cbb4d0;margin:0}
 .pin-close {position:absolute;right:7px;top:3px;border:0;color:#cbb4d0;background:none;width:32px;height:32px;font:24px Georgia,serif;cursor:pointer}
-.pin-digits {display:flex;justify-content:center;gap:14px;margin:19px 0 10px}
-.pin-digits input {box-sizing:border-box;width:52px;height:52px;border:1px solid #a783aa;border-radius:8px;background:#0c0912;color:#f1d6ec;text-align:center;font:26px/1 system-ui,sans-serif;padding:0;caret-color:#f1c994}
+.pin-digits {display:flex;justify-content:center;gap:10px;margin:15px 0 8px}
+.pin-digits input {box-sizing:border-box;min-width:0;width:44px;height:44px;border:1px solid #a783aa;border-radius:7px;background:#0c0912;color:#f1d6ec;text-align:center;font:23px/1 system-ui,sans-serif;padding:0;caret-color:#f1c994}
 .pin-digits input:focus {outline:2px solid #e4b985;outline-offset:3px;border-color:#e4b985}
 .persefone-pin .pin-error {min-height:18px;color:#efb0c6;font-size:12px}
 .values-content {padding:0 16px 12px}
 .dimension-screen .compass-title {text-align:center;letter-spacing:.22em;font-size:14px;margin:20px 0 8px;line-height:1.5}
-.compass-wrap {position:sticky;top:0;z-index:9;padding:27px 24px 30px;background:#08060bf5;isolation:isolate}
+.compass-wrap {position:sticky;top:0;z-index:9;width:min(100%,calc(30dvh + 48px));margin:0 auto;padding:24px;background:#08060bf5;isolation:isolate}
 .compass-axis {position:absolute;font-size:11px;letter-spacing:.04em;color:#e8dfcf;line-height:1}
-.axis-top {top:10px;left:0;width:100%;text-align:center}
-.axis-bottom {bottom:10px;left:0;width:100%;text-align:center}
-.axis-left {left:7px;top:50%;transform:translate(-50%,-50%) rotate(-90deg)}
-.axis-right {right:7px;top:50%;transform:translate(50%,-50%) rotate(90deg)}
-.political-compass {position:relative;width:min(100%,30dvh);margin:0 auto;aspect-ratio:1;border:1px solid #cfad7970;background:#e9d6aa}
+.axis-top {top:5px;left:0;width:100%;text-align:center}
+.axis-bottom {bottom:5px;left:0;width:100%;text-align:center}
+.axis-left {left:10.5px;top:50%;transform:translate(-50%,-50%) rotate(-90deg)}
+.axis-right {right:10.5px;top:50%;transform:translate(50%,-50%) rotate(90deg)}
+.political-compass {position:relative;width:100%;margin:0 auto;aspect-ratio:1;border:1px solid #cfad7970;background:#e9d6aa;container-type:inline-size}
 .compass-quadrants {position:absolute;inset:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:1fr 1fr}
-.quadrant {display:flex;min-width:0;overflow-wrap:anywhere;align-items:flex-start;justify-content:center;padding:12px 5px;font:clamp(8px,1.3dvh,10px)/1.5 Georgia,serif;text-align:center;text-transform:uppercase;letter-spacing:.015em;color:#3b2632}
+.quadrant {display:flex;min-width:0;white-space:nowrap;align-items:flex-start;justify-content:center;padding:10px 3px;font:min(9px,3.7cqw)/1.5 Georgia,serif;text-align:center;text-transform:uppercase;letter-spacing:0;color:#3b2632}
 .quadrant-0 {background:linear-gradient(120deg,#f4a1b8,#fbd0ce)}
 .quadrant-1 {background:linear-gradient(120deg,#74cbec,#a4e5f2)}
 .quadrant-2 {align-items:flex-end;background:linear-gradient(120deg,#b6dda0,#d9efc0)}
