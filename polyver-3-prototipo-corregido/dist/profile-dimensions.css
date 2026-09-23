@@ -1,0 +1,92 @@
+/* These two illustrated modules retain the supplied black, gold and plum palette. */
+html[data-theme] .app-view.dimension-screen {background:#08060b;color:#f5e6d9;min-height:100%;font-family:Georgia,'Times New Roman',serif}
+.dimensions-sr-only {position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+.dimension-art {display:block;position:relative;width:100%;padding:0;margin:0;border:0;border-radius:0;overflow:hidden;background:#08060b}
+.dimension-art img {display:block;width:100%;height:auto;max-width:none;pointer-events:none}
+.dike-art {aspect-ratio:941/509}
+.persefone-art {aspect-ratio:1024/558;cursor:pointer}
+.dimension-art:focus-visible {outline:2px solid #f1be6b;outline-offset:-3px}
+.dimension-screen h2 {font-family:Georgia,'Times New Roman',serif;font-weight:400;color:#f2d7a4}
+.dimension-screen button, .dimension-screen input {-webkit-tap-highlight-color:transparent}
+.spectrum-controls {padding:0 18px}
+.spectrum-intro {display:flex;align-items:center;gap:12px;border-bottom:1px solid #b0835659;padding:12px 0}
+.spectrum-intro p {font:12px/1.5 system-ui,sans-serif;color:#c3b2c9;margin:0;flex:1}
+.dimension-lock {font:12px system-ui,sans-serif;color:#dbb480;border:1px solid #aa784b63;border-radius:6px;min-height:36px;padding:6px 10px;background:#201524}
+.spectrum-row {padding:19px 0 16px;border-bottom:1px solid #b0835659}
+.spectrum-row h2 {text-align:center;font-size:15px;line-height:1.4;margin:0 0 13px;color:#e8d5e5}
+.spectrum-endpoints {display:grid;grid-template-columns:1fr 1fr 1fr;align-items:end;gap:5px;font-size:12px;line-height:1.45;color:#eedbd4;min-height:34px}
+.spectrum-endpoints span:nth-child(2){text-align:center}
+.spectrum-endpoints span:last-child{text-align:right}
+.heart-slider {display:block;-webkit-appearance:none;appearance:none;width:100%;height:44px;margin:0;background:transparent;cursor:ew-resize;touch-action:pan-y}
+.heart-slider::-webkit-slider-runnable-track {height:3px;border-radius:3px;background:linear-gradient(90deg,#775d4d,#f5c392 49%,#866852);box-shadow:0 0 9px #bb689b24}
+.heart-slider::-moz-range-track {height:3px;border-radius:3px;background:linear-gradient(90deg,#775d4d,#f5c392 49%,#866852)}
+.heart-slider::-webkit-slider-thumb {-webkit-appearance:none;width:28px;height:28px;margin-top:-12px;background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 28S2 19 2 10C2 2 12 1 16 8C20 1 30 2 30 10C30 19 16 28 16 28Z' fill='%230c0810' stroke='%23edb8de' stroke-width='1.5'/%3E%3C/svg%3E") center/contain no-repeat;filter:drop-shadow(0 0 5px #bb62a3);border:0;border-radius:0}
+.heart-slider::-moz-range-thumb {width:28px;height:28px;background:transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 28S2 19 2 10C2 2 12 1 16 8C20 1 30 2 30 10C30 19 16 28 16 28Z' fill='%230c0810' stroke='%23edb8de' stroke-width='1.5'/%3E%3C/svg%3E") center/contain no-repeat;filter:drop-shadow(0 0 5px #bb62a3);border:0;border-radius:0}
+.heart-slider:focus-visible {outline:1px solid #e7aad9;outline-offset:1px;border-radius:8px}
+.spectrum-answer {display:block;min-height:34px;text-align:center;color:#efc9e7;font:13px/1.5 system-ui,sans-serif}
+.spectrum-answer small {font-size:12px;white-space:nowrap;color:#aa91b1}
+.dimension-motto {text-align:center;color:#dbb178;font-size:12px;letter-spacing:.18em;line-height:1.8;padding:22px 12px;margin:0}
+.persefone-garden {height:120px;background:url('/official/modules/persefone-spectrum.png') center bottom/100% auto no-repeat}
+.spectrum-locked {position:relative;min-height:375px;overflow:hidden;margin:0 18px}
+.spectrum-blur {filter:blur(7px);opacity:.48;user-select:none;pointer-events:none;padding:22px 0}
+.spectrum-placeholder {display:flex;align-items:center;gap:12px;height:68px;border-bottom:1px solid #dab38c69}
+.spectrum-placeholder i {height:5px;width:38%;background:#b6a497;border-radius:6px}
+.spectrum-placeholder b {height:22px;width:22px;border-radius:50%;background:#a15b96}
+.spectrum-lock-message {position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(#0c0812e8,transparent 70%);padding:20px;text-align:center}
+.spectrum-lock-message>span {font-size:35px;color:#e4bb93}
+.spectrum-lock-message h2 {font-size:25px;margin:10px 0}
+.spectrum-lock-message p {font:14px/1.6 system-ui,sans-serif;color:#d0bfd5}
+.spectrum-lock-message button {min-height:44px;padding:10px 24px;color:#f5dbc6;border:1px solid #ba8e67;border-radius:8px;background:#27142b;font:14px system-ui,sans-serif}
+.persefone-pin {position:fixed;inset:0;margin:auto;box-sizing:border-box;width:min(294px,calc(100% - 38px));max-height:90dvh;padding:25px 22px 15px;border:1px solid #b88a62;border-radius:14px;color:#f5e1d5;background:linear-gradient(130deg,#23132b,#0d0912);box-shadow:0 20px 90px #000b}
+.persefone-pin::backdrop {background:#07050b65}
+.persefone-pin h2 {font:22px/1.3 Georgia,serif;color:#f2d4a4;text-align:center;margin:0 0 8px}
+.persefone-pin p {font:12px/1.5 system-ui,sans-serif;text-align:center;color:#cbb4d0;margin:0}
+.pin-close {position:absolute;right:7px;top:3px;border:0;color:#cbb4d0;background:none;width:32px;height:32px;font:24px Georgia,serif;cursor:pointer}
+.pin-digits {display:flex;justify-content:center;gap:14px;margin:19px 0 10px}
+.pin-digits input {box-sizing:border-box;width:52px;height:52px;border:1px solid #a783aa;border-radius:8px;background:#0c0912;color:#f1d6ec;text-align:center;font:26px/1 system-ui,sans-serif;padding:0;caret-color:#f1c994}
+.pin-digits input:focus {outline:2px solid #e4b985;outline-offset:3px;border-color:#e4b985}
+.persefone-pin .pin-error {min-height:18px;color:#efb0c6;font-size:12px}
+.values-content {padding:0 16px 12px}
+.dimension-screen .compass-title {text-align:center;letter-spacing:.22em;font-size:14px;margin:20px 0 8px;line-height:1.5}
+.compass-wrap {position:sticky;top:0;z-index:9;padding:27px 24px 30px;background:#08060bf5;isolation:isolate}
+.compass-axis {position:absolute;font-size:11px;letter-spacing:.04em;color:#e8dfcf;line-height:1}
+.axis-top {top:10px;left:0;width:100%;text-align:center}
+.axis-bottom {bottom:10px;left:0;width:100%;text-align:center}
+.axis-left {left:7px;top:50%;transform:translate(-50%,-50%) rotate(-90deg)}
+.axis-right {right:7px;top:50%;transform:translate(50%,-50%) rotate(90deg)}
+.political-compass {position:relative;width:min(100%,30dvh);margin:0 auto;aspect-ratio:1;border:1px solid #cfad7970;background:#e9d6aa}
+.compass-quadrants {position:absolute;inset:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:1fr 1fr}
+.quadrant {display:flex;min-width:0;overflow-wrap:anywhere;align-items:flex-start;justify-content:center;padding:12px 5px;font:clamp(8px,1.3dvh,10px)/1.5 Georgia,serif;text-align:center;text-transform:uppercase;letter-spacing:.015em;color:#3b2632}
+.quadrant-0 {background:linear-gradient(120deg,#f4a1b8,#fbd0ce)}
+.quadrant-1 {background:linear-gradient(120deg,#74cbec,#a4e5f2)}
+.quadrant-2 {align-items:flex-end;background:linear-gradient(120deg,#b6dda0,#d9efc0)}
+.quadrant-3 {align-items:flex-end;background:linear-gradient(120deg,#fff3aa,#fff9d5)}
+.compass-cross {position:absolute;inset:0;pointer-events:none}
+.compass-cross::before,.compass-cross::after {content:'';position:absolute;background:#201b20}
+.compass-cross::before {top:0;bottom:0;left:calc(50% - 1px);width:2px}
+.compass-cross::after {left:0;right:0;top:calc(50% - 1px);height:2px}
+.compass-person {position:absolute;z-index:2;width:30px;height:30px;border:2px solid #f9eee1;border-radius:50%;padding:0;background:#291830;transform:translate(-50%,-50%);cursor:pointer;box-shadow:0 1px 8px #0006;transition:left .15s,top .15s}
+.compass-person.compass-you {width:38px;height:38px;border-color:#a952e7;z-index:3;box-shadow:0 0 0 2px #f2d9ff,0 3px 12px #1803247a}
+.compass-person.selected {outline:2px solid #392044;outline-offset:3px}
+.dimension-photo {position:relative;display:block;width:100%;height:100%;border-radius:50%;overflow:hidden;background:#281d2c}
+.dimension-photo img {position:absolute;width:225%;max-width:none;height:auto;left:-62.5%;top:var(--portrait-top,-27%);pointer-events:none}
+.dimension-photo.uploaded img {width:100%;height:100%;left:0;top:0;object-fit:cover}
+.compass-name {position:absolute;top:calc(100% + 3px);left:50%;transform:translateX(-50%);font:10px/1.3 system-ui,sans-serif;background:#201126e8;color:#fff8ed;padding:2px 4px;border-radius:3px;white-space:nowrap;pointer-events:none}
+.compass-legend {display:flex;justify-content:center;gap:19px;padding:5px 0 9px;font:12px system-ui,sans-serif;color:#d7b8e3}
+.values-answer {color:#eed3a6;font:14px/1.6 Georgia,serif;text-align:center;margin:8px 0}
+.compass-note {font:12px/1.55 system-ui,sans-serif;color:#ac9aaa;text-align:center;margin:10px 0 22px}
+.dimension-screen .principles-heading {font-size:27px;line-height:1.3;margin:18px 0 6px;border-top:1px solid #b9925870;padding-top:17px}
+.principles-help {font:12px/1.5 system-ui,sans-serif;color:#bbaaaf;margin:0 0 6px}
+.principle-row {padding:13px 0;border-bottom:1px solid #dfc49426}
+.principle-labels {display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:end;font-size:14px;line-height:1.35;color:#eddfd2}
+.principle-labels>span {text-align:right}
+.principle-input {display:flex;align-items:center;gap:8px;margin-top:3px}
+.principle-input output {font:12px system-ui,sans-serif;color:#dcc8ad;width:35px;flex-shrink:0;font-variant-numeric:tabular-nums}
+.principle-input output:last-child {text-align:right}
+.principle-input input {appearance:none;-webkit-appearance:none;background:transparent;height:40px;min-width:0;width:100%;margin:0;cursor:ew-resize;touch-action:pan-y}
+.principle-input input::-webkit-slider-runnable-track {height:8px;border-radius:10px;background:linear-gradient(90deg,#8c25f2,#cc79bd,#f1c268)}
+.principle-input input::-moz-range-track {height:8px;border-radius:10px;background:linear-gradient(90deg,#8c25f2,#cc79bd,#f1c268)}
+.principle-input input::-webkit-slider-thumb {appearance:none;-webkit-appearance:none;width:19px;height:23px;border:2px solid #f0d9aa;border-radius:5px;background:#241429;margin-top:-7px;box-shadow:0 2px 7px #0007}
+.principle-input input::-moz-range-thumb {width:16px;height:20px;border:2px solid #f0d9aa;border-radius:5px;background:#241429;box-shadow:0 2px 7px #0007}
+.principle-input input:focus-visible {outline:1px solid #ecc389;outline-offset:2px;border-radius:8px}
+@media(prefers-reduced-motion:reduce){.compass-person{transition:none}}

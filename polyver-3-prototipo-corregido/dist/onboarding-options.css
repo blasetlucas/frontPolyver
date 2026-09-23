@@ -51,8 +51,8 @@ html[data-theme=day] .onboarding-triad-selector button[aria-pressed=true]{backgr
 .welcome-center .welcome-bottom p{font-size:10px;line-height:1.5;margin:0 0 5px}
 .welcome-center .welcome-bottom small{font-size:8px;line-height:1.45}
 .welcome-center .primary,.welcome-center .secondary{min-height:44px;padding:9px 5px;font-size:11px;border-radius:12px}
-/* Crop inside the source phone, placing Marte's face near the top. */
-.store-shot.marte-shot:before{inset:0;background-size:300% auto;background-position:50% 40%;background-repeat:no-repeat}
+/* Keep the source phone cropped out and align Marte with Dioniso and Venus. */
+.store-shot.marte-shot:before{inset:-14%;background-size:187% auto;background-position:50% 52%;background-repeat:no-repeat}
 /* Four touch targets with small visible dots. */
 .onboarding-families .onboarding-triad-selector button{width:36px;height:36px;border:0;background:transparent;display:grid;place-items:center}
 .triad-selector-dot{width:9px;height:9px;border-radius:50%;background:#786682;transition:background .15s,transform .15s}

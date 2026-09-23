@@ -1,7 +1,13 @@
 (() => {
+  let started = false;
+  function startEnhancements() {
+    const body = document.body;
+    if (started || !body) return;
+    started = true;
   const photoState = (window.__polyverProfilePhotos ??= [null, null, null, null]);
 
   function resetPrototype() {
+    delete window.__polyverDimensionState;
     for (const key of ['polyver-demo', 'polyver-location']) {
       localStorage.removeItem(key);
     }
@@ -382,7 +388,11 @@
       addCupidCarousel();
     addScrollRail();
   });
-  observer.observe(document.body, { childList: true, subtree: true });
+  observer.observe(body, { childList: true, subtree: true });
   document.addEventListener('toggle', () => window.requestAnimationFrame(updateScrollRail), true);
   window.addEventListener('resize', updateScrollRail, { passive: true });
+  }
+  // React must finish attaching to the static markup before we add controls.
+  window.addEventListener('polyver:ready', startEnhancements, {once: true});
+  if (window.__polyverReactReady) startEnhancements();
 })();

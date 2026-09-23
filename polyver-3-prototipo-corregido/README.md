@@ -71,10 +71,18 @@ La bienvenida reúne a los 12 Cupidos kawaii asomándose desde los cuatro bordes
 
 [Ilustraciones y prompts de creación](IMAGENES.md).
 
-En la App Store simulada, la tarjeta de Marte recorta el interior de la pantalla original: su cara queda más arriba y no aparece la mesa que rodeaba al iPhone.
+En la App Store simulada, la tarjeta de Marte recorta el interior de la pantalla original: su figura queda alineada con Dioniso y Venus y no aparece la mesa que rodeaba al iPhone.
 
 ## Apariencia en Inicio (Dioniso)
 
 A la derecha de «Hola, Luciano» (o el perfil seleccionado) hay un botón pequeño: ☀️ activa el modo día y 🌙 vuelve al modo noche. El control siempre refleja la acción siguiente, también al regresar a Inicio. La elección sigue guardada en el dispositivo y sincronizada entre el prototipo y el chat. Reemplaza el antiguo desplegable que quedaba más abajo en Inicio.
 
 El estado base es siempre noche: sin una elección manual del usuario, nunca se activa el modo día, tampoco por el tema del sistema. Las preferencias de versiones anteriores del prototipo se ignoran. Solo el botón ☀️/🌙 guarda la nueva preferencia manual.
+
+## Presentación móvil
+
+En pantallas de teléfono, el recorrido ocupa la pantalla sin fondo exterior, marco, notch ni indicadores simulados. En escritorio conserva la emulación de iPhone. La flecha de reinicio móvil aparece pequeña junto al reloj, que refleja la hora del dispositivo y se actualiza al volver a la presentación. Se respetan las áreas seguras de la pantalla. `dist/mobile-presentation.css` contiene estos ajustes y `dist/live-clock.js` el reloj.
+
+## Díke y Perséfone interactivas
+
+Los módulos Valores (`values`) e Intimidad (`intimate`) usan los diseños proporcionados el 23 de septiembre. Díke proyecta ocho barras explícitas sobre una brújula orientativa con la foto del perfil y dos Loover de muestra. La brújula permanece visible al desplazar las barras. Perséfone requiere la clave de demostración 666 en cada entrada; la información no se monta hasta desbloquear. Seis controles con corazones actualizan las respuestas. Las elecciones se conservan por perfil durante la sesión y se borran al reiniciar. Este PIN del prototipo es un bloqueo visual, no autenticación de producción. Los originales se conservan en `dist/official/modules/`; componentes, estilos y cálculo están en `profile-dimensions.js`, `profile-dimensions.css` y `profile-dimensions-model.js`.

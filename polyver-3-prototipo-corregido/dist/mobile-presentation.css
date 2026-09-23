@@ -1,0 +1,59 @@
+/* On a phone, the presentation is the screen itself. No simulated hardware. */
+@media (max-width: 767px), (pointer: coarse) and (max-width: 1024px) {
+  html, body, html :is(.prototype, .device-stage) {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    background: #070708;
+    overflow: hidden;
+  }
+  html[data-theme=day] :is(body, .prototype, .device-stage) {
+    background: var(--day-bg, #f7f3fa);
+  }
+  .prototype, .device-stage {display: block}
+  html .device-stage {
+    box-sizing: border-box;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  }
+  .phone {
+    width: 100% !important;
+    height: 100%;
+    max-height: none;
+    aspect-ratio: auto;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .phone-content {border-radius: 0}
+  .phone::before, .speaker, .ios-icons, .scene-nav, .story-panel {display: none}
+  .ios-status {top: 14px; left: 18px; right: 18px; line-height: 16px; font-size: 12px}
+  .live-clock {font-variant-numeric: tabular-nums}
+  /* A small visible arrow retains a comfortable, transparent touch target. */
+  .polyver-reset-wheel {
+    top: 0;
+    bottom: auto;
+    left: 61px;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+    transform: none;
+    opacity: 1;
+    color: #f8dca8;
+  }
+  .polyver-reset-wheel span {
+    display: grid;
+    place-items: center;
+    width: 22px;
+    height: 22px;
+    font-size: 19px;
+  }
+  .polyver-reset-wheel::after {display: none}
+  .polyver-reset-wheel:hover, .polyver-reset-wheel:active {transform: none; box-shadow: none}
+  .polyver-reset-wheel:focus-visible {outline: 2px solid currentColor; outline-offset: -8px; border-radius: 14px}
+  html[data-theme=day] body:has(.form-screen, .app-shell, .store-screen, .partner-portal) > .polyver-reset-wheel {color: #704615}
+}
